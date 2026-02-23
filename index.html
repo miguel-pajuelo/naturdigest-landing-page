@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#064E3B" />
+  <title>NaturDigest — Seguridad alimentaria para intolerancias</title>
+  <meta name="description" content="NaturDigest te ayuda a decidir qué comprar y dónde comer con intolerancias. Escáner de productos, restaurantes con semáforo de seguridad y comunidad con reviews reales." />
+  <meta property="og:title" content="NaturDigest — Seguridad alimentaria para intolerancias" />
+  <meta property="og:description" content="Escanea productos, encuentra restaurantes y recibe recomendaciones seguras según tus intolerancias. IA solo cuando no hay certeza total." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <div class="brand">
+        <img src="assets/logo-mascot.svg" class="brand__logo" alt="" aria-hidden="true">
+        <span class="brand__name">NaturDigest</span>
+      </div>
+
+      <nav class="nav" aria-label="principal">
+        <a href="#como" class="nav__link">Cómo funciona</a>
+        <a href="#features" class="nav__link">Funcionalidades</a>
+        <a href="#comunidad" class="nav__link">Comunidad</a>
+        <a href="#faq" class="nav__link">FAQ</a>
+      </nav>
+
+      <div class="header__cta">
+        <button class="btn btn--ghost" data-scroll="#demo">Ver demo</button>
+        <button class="btn btn--primary" data-scroll="#waitlist">Unirme a la lista</button>
+        <button class="iconbtn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile" id="mobileMenu" hidden>
+      <div class="container mobile__inner">
+        <a href="#como" class="mobile__link">Cómo funciona</a>
+        <a href="#features" class="mobile__link">Funcionalidades</a>
+        <a href="#comunidad" class="mobile__link">Comunidad</a>
+        <a href="#faq" class="mobile__link">FAQ</a>
+        <div class="mobile__actions">
+          <button class="btn btn--ghost wfull" data-scroll="#demo">Ver demo</button>
+          <button class="btn btn--primary wfull" data-scroll="#waitlist">Unirme a la lista</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="pill">
+            <span class="dot"></span>
+            Protección activa según tus intolerancias
+          </div>
+          <h1>Come y compra con <span class="grad">confianza real</span>, no con suerte.</h1>
+          <p class="lead">
+            NaturDigest analiza productos y restaurantes según tu perfil (gluten, lactosa, trazas, etc.).
+            Te marca el riesgo con un <strong>semáforo</strong> y te recomienda opciones seguras.
+            <span class="subtle">IA solo cuando no hay certeza total.</span>
+          </p>
+
+          <div class="hero__actions" id="waitlist">
+            <form class="waitlist" id="waitlistForm">
+              <label class="sr" for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="Tu email" autocomplete="email" required />
+              <button class="btn btn--primary" type="submit">Quiero acceso</button>
+            </form>
+            <p class="micro">
+              <span class="lock">🔒</span> Privacidad total: tus datos de salud se mantienen privados.
+              <a href="#privacidad">Ver cómo</a>
+            </p>
+          </div>
+
+          <div class="trust">
+            <div class="trust__item">
+              <span class="trust__kpi">Semáforo</span>
+              <span class="trust__desc">verde / naranja / rojo</span>
+            </div>
+            <div class="trust__item">
+              <span class="trust__kpi">Comunidad</span>
+              <span class="trust__desc">reviews con intolerancias</span>
+            </div>
+            <div class="trust__item">
+              <span class="trust__kpi">Planificador</span>
+              <span class="trust__desc">comidas + kcal/día</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual" id="demo" aria-label="Vista previa de la app">
+          <div class="phone">
+            <div class="phone__top">
+              <div class="notch"></div>
+              <div class="status"></div>
+            </div>
+
+            <div class="screen">
+              <div class="screen__header">
+                <div>
+                  <div class="kicker">Tu salud hoy</div>
+                  <div class="hello">Hola, Marina</div>
+                  <div class="risk">Riesgos activos: <strong>Gluten</strong> · <strong>Lactosa</strong></div>
+                </div>
+                <div class="avatar" aria-hidden="true">🥑</div>
+              </div>
+
+              <div class="card card--primary">
+                <div class="card__row">
+                  <div class="badge"><span class="shield">🛡️</span> Protección activa hoy</div>
+                </div>
+                <div class="card__title">2 riesgos alimentarios filtrados</div>
+                <div class="chips">
+                  <span class="chip">Gluten (celíaco)</span>
+                  <span class="chip">Lactosa</span>
+                </div>
+              </div>
+
+              <div class="grid2">
+                <div class="action">
+                  <div class="action__icon">📷</div>
+                  <div class="action__label">Escanear producto</div>
+                </div>
+                <div class="action">
+                  <div class="action__icon">💬</div>
+                  <div class="action__label">Asistente IA</div>
+                </div>
+              </div>
+
+              <div class="section">
+                <div class="section__head">
+                  <div class="section__title">La comunidad recomienda</div>
+                  <button class="linkbtn" type="button">Ver más</button>
+                </div>
+                <div class="hscroll">
+                  <div class="mini">
+                    <div class="mini__tag ok">Seguro</div>
+                    <div class="mini__name">Pan molde S/G</div>
+                    <div class="mini__meta">Schär · ★ 4.9</div>
+                    <div class="mini__quote">“Esponjoso y seguro.”</div>
+                  </div>
+                  <div class="mini">
+                    <div class="mini__tag ok">Seguro</div>
+                    <div class="mini__name">Leche almendras</div>
+                    <div class="mini__meta">Alpro · ★ 4.7</div>
+                    <div class="mini__quote">“Sin azúcar, perfecta.”</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section">
+                <div class="section__head">
+                  <div class="section__title">Dónde comer tranquilo</div>
+                  <button class="linkbtn" type="button">Explorar</button>
+                </div>
+                <div class="hscroll">
+                  <div class="mini">
+                    <div class="mini__tag ok">Seguro</div>
+                    <div class="mini__name">Sana Locura</div>
+                    <div class="mini__meta">Madrid · ★ 4.9</div>
+                    <div class="mini__quote">“El paraíso sin gluten.”</div>
+                  </div>
+                  <div class="mini">
+                    <div class="mini__tag warn">Parcial</div>
+                    <div class="mini__name">Pizza Natura</div>
+                    <div class="mini__meta">Madrid · ★ 4.6</div>
+                    <div class="mini__quote">“Opciones sin gluten, pregunta.”</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="footerhint">+ más funciones: recetas IA, lista de compra, historial, mapa…</div>
+            </div>
+          </div>
+          <div class="glow" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="como">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2>Cómo funciona (sin humo)</h2>
+          <p>Decisiones rápidas, trazables y adaptadas a tus restricciones.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__n">1</div>
+            <h3>Configuras intolerancias</h3>
+            <p>Gluten, lactosa, frutos secos, trazas… tu perfil define el filtro activo.</p>
+          </div>
+          <div class="step">
+            <div class="step__n">2</div>
+            <h3>Escaneas o buscas</h3>
+            <p>Código de barras, etiqueta, o restaurantes cercanos en mapa.</p>
+          </div>
+          <div class="step">
+            <div class="step__n">3</div>
+            <h3>Te damos un semáforo</h3>
+            <p>Verde si es apto, naranja si hay opciones, rojo si no hay info o no es apto.</p>
+          </div>
+          <div class="step">
+            <div class="step__n">4</div>
+            <h3>Comunidad + IA donde toca</h3>
+            <p>Reviews de gente con tu perfil. IA solo cuando falta garantía total.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2>Funcionalidades clave</h2>
+          <p>Lo que hace que NaturDigest sea útil en el mundo real.</p>
+        </div>
+
+        <div class="cards">
+          <article class="fcard">
+            <div class="ficon">🧾</div>
+            <h3>Escáner de productos</h3>
+            <p>Código de barras + etiqueta. Resultado con semáforo y alertas por trazas/ingredientes.</p>
+          </article>
+          <article class="fcard">
+            <div class="ficon">🗺️</div>
+            <h3>Mapa de restaurantes</h3>
+            <p>Pins por seguridad (verde/naranja/rojo). Filtros por tipo de comida y nivel de riesgo.</p>
+          </article>
+          <article class="fcard">
+            <div class="ficon">🍽️</div>
+            <h3>Platos recomendados</h3>
+            <p>En cada restaurante: qué pedir, qué evitar, horarios, menú y notas de seguridad.</p>
+          </article>
+          <article class="fcard">
+            <div class="ficon">👥</div>
+            <h3>Comunidad</h3>
+            <p>Reviews relevantes de gente con tu perfil (p.ej. celíacos). Señales de contaminación cruzada.</p>
+          </article>
+          <article class="fcard">
+            <div class="ficon">📅</div>
+            <h3>Planificador de comidas</h3>
+            <p>Comidas por día, platos dentro de cada comida, suma automática de kcal y notas.</p>
+          </article>
+          <article class="fcard">
+            <div class="ficon">🤖</div>
+            <h3>Recetas por IA</h3>
+            <p>Genera recetas a partir de tu idea y revisa antes de guardar: nombre, ingredientes, tiempo y kcal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="community" id="comunidad">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2>La comunidad recomienda (de verdad)</h2>
+          <p>Reviews útiles: cortas, concretas y con contexto de intolerancias.</p>
+        </div>
+
+        <div class="twocol">
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Productos</h3>
+              <span class="pill pill--small"><span class="dot dot--ok"></span> Relevante para tu perfil</span>
+            </div>
+
+            <div class="review">
+              <div class="review__top">
+                <strong>Pan molde S/G</strong>
+                <span class="stars">★★★★★</span>
+              </div>
+              <div class="review__tag">Gluten · Lactosa</div>
+              <p>“Me sienta genial y no me ha dado reacciones. Ojo: comprobar lotes cuando cambian envase.”</p>
+            </div>
+
+            <div class="review">
+              <div class="review__top">
+                <strong>Cereales choco</strong>
+                <span class="stars">★★★☆☆</span>
+              </div>
+              <div class="review__tag">Trazas</div>
+              <p>“Sabe bien, pero me saltó por trazas. Mejor alternativa: opción sin riesgo declarado.”</p>
+            </div>
+
+            <button class="btn btn--outline wfull">Ver más productos</button>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Restaurantes</h3>
+              <span class="pill pill--small"><span class="dot dot--warn"></span> Semáforo por seguridad</span>
+            </div>
+
+            <div class="review">
+              <div class="review__top">
+                <strong>Sana Locura</strong>
+                <span class="stars">★★★★★</span>
+              </div>
+              <div class="review__tag">Sin gluten</div>
+              <p>“Pregunté por freidoras: usan aceite exclusivo. Pedí X y todo perfecto.”</p>
+            </div>
+
+            <div class="review">
+              <div class="review__top">
+                <strong>Ginos</strong>
+                <span class="stars">★★☆☆☆</span>
+              </div>
+              <div class="review__tag">Contaminación cruzada</div>
+              <p>“Tienen opciones, pero no garantizan separación total. Pide info y evita fritos.”</p>
+            </div>
+
+            <button class="btn btn--outline wfull">Explorar restaurantes</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy" id="privacidad">
+      <div class="container privacy__box">
+        <div class="privacy__icon">🔒</div>
+        <div>
+          <h2>Privacidad total (por diseño)</h2>
+          <p>
+            NaturDigest está pensado para tratar datos sensibles con cuidado.
+            Objetivo: procesamiento local cuando sea posible y control del usuario sobre lo que comparte.
+          </p>
+          <ul class="bullets">
+            <li>Tu perfil de intolerancias guía los filtros y recomendaciones.</li>
+            <li>La comunidad se basa en señales útiles, no en “posts” genéricos.</li>
+            <li>IA se usa como apoyo cuando faltan datos verificables.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner">
+        <div>
+          <h2>¿Te interesa probar NaturDigest?</h2>
+          <p>Apúntate y te avisamos cuando esté lista la beta.</p>
+        </div>
+        <form class="waitlist waitlist--big" id="waitlistForm2">
+          <label class="sr" for="email2">Email</label>
+          <input id="email2" name="email" type="email" placeholder="Tu email" autocomplete="email" required />
+          <button class="btn btn--primary" type="submit">Unirme</button>
+        </form>
+      </div>
+      <p class="micro center">Esto es una landing para validar interés. No enviamos spam.</p>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="sectionTitle">
+          <h2>Preguntas rápidas</h2>
+          <p>Lo típico que se pregunta antes de apuntarse.</p>
+        </div>
+
+        <div class="accordion" data-accordion>
+          <details>
+            <summary>¿NaturDigest sustituye a un profesional médico?</summary>
+            <p>No. Es una herramienta de apoyo para decisiones cotidianas. Ante dudas clínicas, médico/dietista.</p>
+          </details>
+          <details>
+            <summary>¿Qué significa exactamente el color naranja?</summary>
+            <p>Que hay opciones potencialmente aptas, pero no se puede garantizar al 100% (p.ej. contaminación cruzada o datos incompletos).</p>
+          </details>
+          <details>
+            <summary>¿La IA decide por mí?</summary>
+            <p>No. La app prioriza datos verificables. La IA aparece como capa de ayuda cuando faltan garantías.</p>
+          </details>
+          <details>
+            <summary>¿Cuándo estará disponible?</summary>
+            <p>Estamos validando interés. Si te apuntas, te contactamos para la beta.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="brand brand--small">
+          <img src="assets/logo-mascot.svg" class="brand__logo" alt="" aria-hidden="true">
+          <span class="brand__name">NaturDigest</span>
+        </div>
+        <div class="footer__links">
+          <a href="#como">Cómo funciona</a>
+          <a href="#features">Funcionalidades</a>
+          <a href="#comunidad">Comunidad</a>
+          <a href="#privacidad">Privacidad</a>
+        </div>
+        <div class="footer__copy">© <span id="year"></span> NaturDigest · Hecho para comer tranquilo.</div>
+      </div>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
